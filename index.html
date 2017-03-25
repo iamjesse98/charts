@@ -3,7 +3,7 @@
 
 
 <style>
-	@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 body{
   padding: 0;
   margin: 0;
@@ -39,6 +39,8 @@ body{
 	<div id="chartDiv9"></div>
 	
 	<div id="chartDiv10"></div>
+	
+	<div id="wordchart"></div>
 	
 <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
 <script> zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/"
@@ -251,6 +253,24 @@ let chartData10 = {
     zingchart.render({
       id: "chartDiv10",
       data: chartData10,
+      height: 400,
+})
+
+let chartword = {
+        "graphset":[
+            {
+                "type":"wordcloud",
+                "options":{
+                    "text":"I believe in innovation and that the way you get innovation is you fund research and you learn the basic facts.",
+                    "max-items":200,
+                    "min-length":5
+                }
+           }
+        ]
+    }
+    zingchart.render({ // Render Method
+      id: "wordchart",
+      data: chartword,
       height: 400,
 })
 </script>
