@@ -1,0 +1,256 @@
+<html>
+	<head>
+
+
+<style>
+body{
+  padding: 0;
+  margin: 0;
+}
+.zc-ref, div[id$='menu-item-xmiabt'], div[id$='menu-item-viewsource'], div[id$='license-text']{
+  display: none;
+}
+</style>
+	</head>
+	<body>
+	
+	<h1>Responsive Charts By YADAGALLA JASWANTH KUMAR</h1>
+	
+	<div id="chartDiv"></div>
+	
+	<div id="chartDiv1"></div>
+	
+	<div id="chartDiv2"></div>
+	
+	<div id="chartDiv3"></div>
+	
+	<div id="chartDiv4"></div>
+	
+	<div id="chartDiv5"></div>
+	
+	<div id="chartDiv6"></div>
+	
+	<div id="chartDiv7"></div>
+	
+	<div id="chartDiv8"></div>
+	
+	<div id="chartDiv9"></div>
+	
+	<div id="chartDiv10"></div>
+	
+<script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+<script> zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/"
+</script>
+
+<script>
+let chartData = {
+      type: `area`,  // Specify your chart type here.
+      title: {
+        text: `My First Chart` // Adds a title to your chart
+      },
+      legend: {}, // Creates an interactive legend
+      series: [  // Insert your series data here.
+          { values: [20,40,25,50,15,45,33,34, 10]},
+          { values: [5,30,21,18,59,50,28,33, 11]}
+      ]
+    }
+    zingchart.render({ // Render Method
+      id: `chartDiv`,
+      data: chartData,
+      height: 550,
+})
+
+let chartData1 = {
+      type: `area`,  // Specify your chart type here.
+      title: {
+        text: `My First Chart` // Adds a title to your chart
+      },
+      legend: {}, // Creates an interactive legend
+      series: [  // Insert your series data here.
+          { values: [20,40,25,50,15,45,33,34]},
+          { values: [5,30,21,18,59,50,28,33]},
+          { values: [15,20,28,18,69,10,22,53]}
+      ]
+    }
+    zingchart.render({ // Render Method
+      id: `chartDiv1`,
+      data: chartData1,
+      theme: `dark`
+})
+
+let chartData2 = {
+      type: `area3d`,
+      title: {
+        text: `3D AREA`
+      },
+      legend: {},
+      series: [
+          { values: [20,40,25,50,15,45,33,34]},
+          { values: [5,30,21,18,59,50,28,33]}
+      ]
+    }
+    zingchart.render({
+      id: `chartDiv2`,
+      data: chartData2,
+      height: 400,
+})
+let chartData3 = {
+      type: `bar`,
+      title: {
+        text: `BAR`
+      },
+      series: [
+          { values: [35, 42, 67, 89]},
+          { values: [28, 40, 39, 36]}
+      ]
+    }
+    zingchart.render({
+      id: `chartDiv3`,
+      data: chartData3,
+      height: 400
+})
+
+let chartData4 = {
+      type: `hbar`,
+      title: {
+        text: `X-BAR`
+      },
+      series: [
+          { values: [35, 42, 67, 89]},
+          { values: [28, 40, 39, 36]}
+      ]
+    }
+    zingchart.render({
+      id: `chartDiv4`,
+      data: chartData4,
+      height: 400
+})
+
+let chartData5 = {
+      type: `bar3d`,
+      title: {
+        text: `3D BAR`
+      },
+      series: [
+          { values: [35, 42, 67, 89]},
+          { values: [28, 40, 39, 36]}
+      ]
+    }
+    zingchart.render({
+      id: `chartDiv5`,
+      data: chartData5,
+      height: 400
+})
+
+let chartData6 = {
+      type: `hbar3d`,
+      title: {
+        text: `3D X-BAR`
+      },
+      series: [
+          { values: [35, 42, 67, 89]},
+          { values: [28, 40, 39, 36]}
+      ]
+    }
+    zingchart.render({
+      id: `chartDiv6`,
+      data: chartData6,
+      height: 400
+})
+
+let chartData7 = {
+      type: "bubble",
+      title: {
+        text: "My First Chart"
+      },
+      legend: {},
+      series: [
+          { values: [[1,9,59],
+            [2,15,15],
+            [3,21,30],
+            [4,30,5],
+            [5,40,35],
+            [6,59,21],
+            [7,60,25],
+            [8,75,85],
+            [9,81,87],
+            [10,99,12]]},
+      ]
+    }
+    zingchart.render({
+      id: "chartDiv7",
+      data: chartData7,
+      height: 400,
+})
+
+let chartData8 = {
+      type: "hbubble",
+      title: {
+        text: "My First Chart"
+      },
+      legend: {},
+      series: [
+          { values: [[1,9,59],
+            [2,15,15],
+            [3,21,30],
+            [4,30,5],
+            [5,40,35],
+            [6,59,21],
+            [7,60,25],
+            [8,75,85],
+            [9,81,87],
+            [10,99,12]]},
+      ]
+    }
+    zingchart.render({
+      id: "chartDiv8",
+      data: chartData8,
+      height: 400,
+})
+
+let chartData9 = {
+      "type": "bubble-pie",   //Specify your chart type.
+      "plot": {
+        "values": [         //(1) Provide your bubble chart data.
+          [3,3,34],                   //for bubble-pie 1
+          [5,12,101],                 //for bubble-pie 2
+          [9,7,59],                   //for bubble-pie 3
+          [11,5,15],                  //for bubble-pie 4
+          [14,14,30]                  //for bubble-pie 5
+        ]
+      },
+      "series": [             //(2) Provide your pie chart data.
+        {"data-v": [15,37,7,3,14]},     //slice1
+        {"data-v": [13,34,21,7,8]},     //slice2
+        {"data-v": [6,30,31,5,8]},      //slice3
+        {"data-v": [5,29,null,3,13]},   //slice4
+        {"data-v": [3,25,19,3,null]}    //slice5
+      ]
+    }
+    zingchart.render({ // Render Method
+      id: "chartDiv9",
+      data: chartData9,
+      height: 400
+})
+
+let chartData10 = {
+      type: "bullet",
+      title: {
+        text: "My First Chart"
+      },
+      legend: {},
+      series: [
+          { 
+            values: [20,40,25,50,15,45,33,34],
+            goals: [25,43,30,40,21,59,35,31]
+          },
+      ],
+    }
+    zingchart.render({
+      id: "chartDiv10",
+      data: chartData10,
+      height: 400,
+})
+</script>
+	</body>
+</html>
